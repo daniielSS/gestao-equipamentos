@@ -4,6 +4,7 @@ public class UsuarioSistema {
 
     private int idUsuario;
     private String nomeUsuario;
+    private String nomeFuncionario;
     private String email;
     private int tipoCargo;
     private String nomeCargo;
@@ -23,6 +24,14 @@ public class UsuarioSistema {
 
     public void setNomeUsuario(String nomeUsuario) {
         this.nomeUsuario = nomeUsuario;
+    }
+
+    public String getNomeFuncionario() {
+        return nomeFuncionario;
+    }
+
+    public void setNomeFuncionario(String nomeFuncionario) {
+        this.nomeFuncionario = nomeFuncionario;
     }
 
     public String getEmail() {
