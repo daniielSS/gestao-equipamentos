@@ -1,6 +1,7 @@
 package br.unip.gestaoequipamentos.services;
 
 import br.unip.gestaoequipamentos.interfaces.CadastroUsuario;
+import br.unip.gestaoequipamentos.interfacesImpl.CadastroUsuarioImpl;
 import br.unip.gestaoequipamentos.interfacesImpl.InicioSessaoImpl;
 import br.unip.gestaoequipamentos.models.UsuarioSistema;
 
@@ -9,10 +10,11 @@ import java.util.Scanner;
 public class InicioSessaoService {
 
     private static InicioSessaoImpl inicioSessaoImpl;
-    private static CadastroUsuario cadastroUsuario;
     private static UsuarioSistema usuarioSistema;
 
     public static void inicioSessao(){
+
+        CadastroUsuarioImpl cadastroUsuarioImpl = new CadastroUsuarioImpl();
 
         Scanner scan = new Scanner(System.in);
         int opcaoSelecionada = scan.nextInt();
@@ -22,7 +24,7 @@ public class InicioSessaoService {
                 System.out.println("Tela Login em construção!");
                 break;
             case 2:
-                cadastroUsuario.inserirNome(usuarioSistema);
+                cadastroUsuarioImpl.inserirNome(usuarioSistema);
                 break;
             default:
                 System.out.println("Opção Inválida!");

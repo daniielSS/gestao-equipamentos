@@ -5,7 +5,6 @@ import br.unip.gestaoequipamentos.models.UsuarioSistema;
 
 public class CadastroUsuarioImpl implements CadastroUsuario {
 
-    @Override
     public void inserirNome(UsuarioSistema usuarioSistema) {
 
         System.out.println("********************************************************");
