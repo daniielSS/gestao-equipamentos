@@ -20,6 +20,7 @@ public class CadastroUsuarioImpl implements CadastroUsuario {
         System.out.println("*                                                      *");
         System.out.print("Terminal: ");
 
+
     }
 
     @Override
@@ -61,7 +62,7 @@ public class CadastroUsuarioImpl implements CadastroUsuario {
     public void inserirSenha(UsuarioSistema usuarioSistema) {
 
         System.out.println("*                                                      *");
-        System.out.println("* 5º Digite sua senha                                  *");
+        System.out.println("* 5º Digite uma senha                                  *");
         System.out.println("*                                                      *");
         System.out.print("Terminal: ");
 

@@ -1,8 +1,11 @@
 package br.unip.gestaoequipamentos.interfacesImpl;
 
 import br.unip.gestaoequipamentos.interfaces.InicioSessao;
+import br.unip.gestaoequipamentos.services.InicioSessaoService;
 
 public class InicioSessaoImpl implements InicioSessao {
+
+    private InicioSessaoService inicioSessaoService;
 
     /**
      * Método para iniciar a sessão no sistema
@@ -26,6 +29,10 @@ public class InicioSessaoImpl implements InicioSessao {
         System.out.println("* 2- Primeiro Acesso                                   *");
         System.out.println("*                                                      *");
         System.out.println("********************************************************");
+        System.out.println("*                                                      *");
+        System.out.print("Terminal: ");
+
+        InicioSessaoService.inicioSessao();
 
     }
 
