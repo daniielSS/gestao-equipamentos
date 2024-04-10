@@ -5,7 +5,6 @@ import br.unip.gestaoequipamentos.models.UsuarioSistema;
 
 public class CadastroUsuarioImpl implements CadastroUsuario {
 
-    @Override
     public void inserirNome(UsuarioSistema usuarioSistema) {
 
         System.out.println("********************************************************");
@@ -19,6 +18,7 @@ public class CadastroUsuarioImpl implements CadastroUsuario {
         System.out.println("* 1º Digite seu nome completo                          *");
         System.out.println("*                                                      *");
         System.out.print("Terminal: ");
+
 
     }
 
@@ -61,7 +61,7 @@ public class CadastroUsuarioImpl implements CadastroUsuario {
     public void inserirSenha(UsuarioSistema usuarioSistema) {
 
         System.out.println("*                                                      *");
-        System.out.println("* 5º Digite sua senha                                  *");
+        System.out.println("* 5º Digite uma senha                                  *");
         System.out.println("*                                                      *");
         System.out.print("Terminal: ");
 
