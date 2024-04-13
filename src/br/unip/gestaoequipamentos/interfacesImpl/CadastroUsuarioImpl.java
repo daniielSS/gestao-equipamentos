@@ -2,8 +2,11 @@ package br.unip.gestaoequipamentos.interfacesImpl;
 
 import br.unip.gestaoequipamentos.interfaces.CadastroUsuario;
 import br.unip.gestaoequipamentos.models.UsuarioSistema;
+import br.unip.gestaoequipamentos.services.CadastroUsuarioService;
 
 public class CadastroUsuarioImpl implements CadastroUsuario {
+
+    private CadastroUsuarioService cadastroUsuarioService;
 
     public void inserirNome(UsuarioSistema usuarioSistema) {
 
@@ -18,6 +21,8 @@ public class CadastroUsuarioImpl implements CadastroUsuario {
         System.out.println("* 1º Digite seu nome completo                          *");
         System.out.println("*                                                      *");
         System.out.print("Terminal: ");
+
+        CadastroUsuarioService.inserirNome(usuarioSistema);
 
 
     }
