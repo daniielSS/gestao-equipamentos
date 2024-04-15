@@ -4,11 +4,13 @@ import br.unip.gestaoequipamentos.interfaces.CadastroUsuario;
 import br.unip.gestaoequipamentos.models.UsuarioSistema;
 import br.unip.gestaoequipamentos.services.CadastroUsuarioService;
 
+import java.io.IOException;
+
 public class CadastroUsuarioImpl implements CadastroUsuario {
 
     private CadastroUsuarioService cadastroUsuarioService;
 
-    public void inserirNome(UsuarioSistema usuarioSistema) {
+    public void inserirNome(UsuarioSistema usuarioSistema) throws IOException {
 
         System.out.println("********************************************************");
         System.out.println("*                                                      *");
@@ -28,29 +30,34 @@ public class CadastroUsuarioImpl implements CadastroUsuario {
     }
 
     @Override
-    public void inserirUsuario(UsuarioSistema usuarioSistema) {
+    public void inserirUsuario(UsuarioSistema usuarioSistema) throws IOException {
 
         System.out.println("*                                                      *");
-        System.out.println("* 2º Digite seu usuário acesso (Ele será utilizado     *");
-        System.out.println("* para realizar o login no sistema!)                   *");
+        System.out.println("* 2º Digite seu usuário acesso (Ex: user.test)         *");
         System.out.println("*                                                      *");
         System.out.print("Terminal: ");
+
+        CadastroUsuarioService.inserirUsuario(usuarioSistema);
 
     }
 
     @Override
-    public void inserirEmail(UsuarioSistema usuarioSistema) {
+    public void inserirEmail(UsuarioSistema usuarioSistema) throws IOException {
 
+        System.out.println("*                                                      *");
         System.out.println("*                                                      *");
         System.out.println("* 3º Digite seu e-mail                                 *");
         System.out.println("*                                                      *");
         System.out.print("Terminal: ");
 
+        CadastroUsuarioService.inserirEmail(usuarioSistema);
+
     }
 
     @Override
-    public void inserirCargo(UsuarioSistema usuarioSistema) {
+    public void inserirCargo(UsuarioSistema usuarioSistema) throws IOException {
 
+        System.out.println("*                                                      *");
         System.out.println("*                                                      *");
         System.out.println("* 4º Selecione seu cargo                               *");
         System.out.println("*                                                      *");
@@ -60,11 +67,14 @@ public class CadastroUsuarioImpl implements CadastroUsuario {
         System.out.println("*                                                      *");
         System.out.print("Terminal: ");
 
+        CadastroUsuarioService.inserirCargo(usuarioSistema);
+
     }
 
     @Override
     public void inserirSenha(UsuarioSistema usuarioSistema) {
 
+        System.out.println("*                                                      *");
         System.out.println("*                                                      *");
         System.out.println("* 5º Digite uma senha                                  *");
         System.out.println("*                                                      *");

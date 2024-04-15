@@ -3,6 +3,8 @@ package br.unip.gestaoequipamentos.interfacesImpl;
 import br.unip.gestaoequipamentos.interfaces.InicioSessao;
 import br.unip.gestaoequipamentos.services.InicioSessaoService;
 
+import java.io.IOException;
+
 public class InicioSessaoImpl implements InicioSessao {
 
     private InicioSessaoService inicioSessaoService;
@@ -12,7 +14,7 @@ public class InicioSessaoImpl implements InicioSessao {
      * @author Daniel Soares SIlva
      */
     @Override
-    public void inicioSessao(){
+    public void inicioSessao() throws IOException {
 
         System.out.println("********************************************************");
         System.out.println("*                                                      *");
